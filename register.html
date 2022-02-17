@@ -35,16 +35,25 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center ">
+  <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html"><span>MTs. ManHud</span></a></h1>
+        <h1 class="text-light"><a href="/index.html"><span>MTs. ManHud</span></a></h1>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#formulir">Formulir</a></li>
+          <li><a href="/index.html#hero">Home</a></li>
+          <li class="drop-down"><a href="#">Pendaftaran</a>
+            <ul>
+              <li><a href="index.html#about">Informasi Pendaftaran</a></li>
+              <li class="active"><a href="#formulir">Daftar Sekarang</a></li>
+            </ul>
+          </li>
+          <li><a href="/profile.html#details">Profile</a></li>
+          <li><a href="/profile.html#features">Ekstrakurikuler</a></li>
+          <li><a href="/galery.html#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
 
         </ul>
@@ -55,10 +64,441 @@
 
   <main id="main">
 
-    <section id="formulir" class="breadcrumbs bg-white">
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSemGxtwCn0LZMWvhaHnhyvYFYUQMoS1x536S6u63uRTxgbr8A/viewform?embedded=true"
-        width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+    <section id="formulir" class="faq section-bg mt-5">
+      <div class="container">
+        <div class="section-title mt-5" data-aos="fade-up">
+          <h2>Formulir</h2>
+          <p>Formulir Pendaftaran</p>
+          <span>Silahkan isikan data diri anda melalui formulir dibawah kemudian klik tombol <b>Kirim Data</b>!</span>
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-12" data-aos="fade-left" data-aos-delay="200">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <!-- Identitas Pribadi -->
+              <div class="faq-list">
+                <ul>
+                  <li data-aos="fade-up">
+                    <i class="bx bx-user-circle icon-help"></i> <a data-toggle="collapse" class="collapse"
+                      href="#identitas-pribadi">Identitas Pribadi Peserta Didik<i
+                        class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="identitas-pribadi" class="collapse show" data-parent=".faq-list">
+
+                      <div class="form-row mt-4">
+                        <div class="col-md-6 form-group">
+                          <label for="nama_lengkap">Nama Lengkap <small><i>Sesuai Ijazah / Akta
+                                Kelahiran</i></small></label>
+                          <input type="text" name="nama_lengkap" class="form-control" id="nama_lengkap" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="jenis_kelamin">Jenis Kelamin</label>
+                          <select name="jenis_kelamin" class="form-control" id="jenis_kelamin" required
+                            oninvalid="this.setCustomValidity('Silahkan pilih jenis kelamin !')"
+                            oninput="setCustomValidity('')">
+                            <option value="">-- Pilih Jenis Kelamin --</option>
+                            <option value="Laki-Laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="nisn">NISN (Nomor Induk Siswa Nasional)</label>
+                          <input type="number" name="nisn" class="form-control" id="nisn" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="nik">NIK (Nomor Induk Kependudukan) <small><i>Sesuai KK</i></small></label>
+                          <input type="number" name="nik" class="form-control" id="nik" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="tempat_lahir">Tempat Lahir <small><i>Sesuai Ijazah / Akta
+                                Kelahiran</i></small></label>
+                          <input type="text" name="tempat_lahir" class="form-control" id="tempat_lahir" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="tanggal_lahir">Tanggal Lahir <small><i>Sesuai Ijazah / Akta
+                                Kelahiran</i></small></label>
+                          <input type="date" name="tanggal_lahir" class="form-control" id="tanggal_lahir" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="desa_kelurahan">Desa/Kelurahan</label>
+                          <input type="text" name="desa_kelurahan" class="form-control" id="desa_kelurahan" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="kecamatan">Kecamatan</label>
+                          <input type="text" name="kecamatan" class="form-control" id="kecamatan" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="kabupaten_kota">Kabupaten/Kota</label>
+                          <input type="text" name="kabupaten_kota" class="form-control" id="kabupaten_kota" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="provinsi">Provinsi</label>
+                          <input type="text" name="provinsi" class="form-control" id="provinsi" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="nomor_wa">Nomor WA</label>
+                        <input type="number" class="form-control" name="nomor_wa" id="nomor_wa" required
+                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="prestasi">Prestasi/Lomba Yang Pernah Didapat
+                          <small><i>(opsional)</i></small></label>
+                        <textarea class="form-control" name="prestasi" rows="2"></textarea>
+                      </div>
+
+                    </div>
+                  </li>
+
+                  <li data-aos="fade-up" data-aos-delay="100">
+                    <i class="bx bx-user-circle icon-help"></i> <a data-toggle="collapse" href="#data-ayah"
+                      class="collapsed">Identitas Ayah Kandung <i class="bx bx-chevron-down icon-show"></i><i
+                        class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="data-ayah" class="collapse" data-parent=".faq-list">
+
+                      <div class="form-row mt-4">
+                        <div class="col-md-6 form-group">
+                          <label for="nama_ayah">Nama Ayah <small><i>Sesuai Ijazah / Akta Kelahiran</i></small></label>
+                          <input type="text" name="nama_ayah" class="form-control" id="nama_ayah" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="nik_ayah">NIK Ayah <small><i>Sesuai KK</i></small></label>
+                          <input type="number" name="nik_ayah" class="form-control" id="nik_ayah" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="tempat_lahir_ayah">Tempat Lahir Ayah</label>
+                          <input type="text" name="tempat_lahir_ayah" class="form-control" id="tempat_lahir_ayah"
+                            required oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="tanggal_lahir_ayah">Tanggal Lahir Ayah</label>
+                          <input type="date" name="tanggal_lahir_ayah" class="form-control" id="tanggal_lahir_ayah"
+                            required oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="pekerjaan_ayah">Pekerjaan Ayah</label>
+                          <select name="pekerjaan_ayah" class="form-control" id="pekerjaan_ayah" required
+                            oninvalid="this.setCustomValidity('Silahkan pilih pekerjaan ayah !')"
+                            oninput="setCustomValidity('')">
+                            <option value="">-- Pilih Pekerjaan Ayah --</option>
+                            <option value="Tidak Bekerja">Tidak Bekerja</option>
+                            <option value="PNS">PNS</option>
+                            <option value="TNI / Polri">TNI / Polri</option>
+                            <option value="Guru / Dosen">Guru / Dosen</option>
+                            <option value="Pegawai Swasta">Pegawai Swasta</option>
+                            <option value="Wiraswasta / Wirausaha">Wiraswasta / Wirausaha</option>
+                            <option value="Dokter / Perawat">Dokter / Perawat</option>
+                            <option value="Pedagang">Pedagang</option>
+                            <option value="Petani / Peternak">Petani / Peternak</option>
+                            <option value="Nelayan">Nelayan</option>
+                            <option value="Buruh (Tani / Bangunan)">Buruh (Tani / Bangunan)</option>
+                            <option value="Sopir">Sopir</option>
+                            <option value="Lainnya">Lainnya</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="status_ayah">Status Ayah</label>
+                          <select name="status_ayah" class="form-control" id="status_ayah" required
+                            oninvalid="this.setCustomValidity('Silahkan pilih status ayah !')"
+                            oninput="setCustomValidity('')">
+                            <option value="">-- Pilih Status Ayah --</option>
+                            <option value="Masih Hidup">Masih Hidup</option>
+                            <option value="Meninggal">Meninggal</option>
+                            <option value="Tidak Diketahui">Tidak Diketahui</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="pendidikan_terakhir_ayah">Pendidikan Terakhir Ayah</label>
+                          <select name="pendidikan_terakhir_ayah" class="form-control" id="pendidikan_terakhir_ayah"
+                            required oninvalid="this.setCustomValidity('Silahkan pilih pendidikan ayah !')"
+                            oninput="setCustomValidity('')">
+                            <option value="">-- Pilih Pendidikan Ayah --</option>
+                            <option value="Tidak Sekolah">Tidak Sekolah</option>
+                            <option value="SD Sederajat">SD Sederajat</option>
+                            <option value="SLTP Sederajat">SLTP Sederajat</option>
+                            <option value="SLTA Sederajat">SLTA Sederajat</option>
+                            <option value="S-1">S-1</option>
+                            <option value="S-2">S-2</option>
+                            <option value="S-3">S-3</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="penghasilan_ayah">Penghasilan Ayah Perbulan</label>
+                          <select name="penghasilan_ayah" class="form-control" id="penghasilan_ayah" required
+                            oninvalid="this.setCustomValidity('Silahkan penghasilan ayah !')"
+                            oninput="setCustomValidity('')">
+                            <option value="">-- Pilih Penghasilan Ayah --</option>
+                            <option value="< Rp. 1.000.000">
+                              < Rp. 1.000.000</option>
+                            <option value="Rp. 1.000.000 s/d Rp. 2.000.000">Rp. 1.000.000 s/d Rp. 2.000.000</option>
+                            <option value="> Rp. 2.000.000">> Rp. 2.000.000</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li data-aos="fade-up" data-aos-delay="200">
+                    <i class="bx bx-user-circle icon-help"></i> <a data-toggle="collapse" href="#data-ibu"
+                      class="collapsed">Identitas Ibu Kandung <i class="bx bx-chevron-down icon-show"></i><i
+                        class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="data-ibu" class="collapse" data-parent=".faq-list">
+
+                      <div class="form-row mt-4">
+                        <div class="col-md-6 form-group">
+                          <label for="nama_ibu">Nama Ibu <small><i>Sesuai Ijazah / Akta Kelahiran</i></small></label>
+                          <input type="text" name="nama_ibu" class="form-control" id="nama_ibu" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="nik_ibu">NIK Ibu <small><i>Sesuai KK</i></small></label>
+                          <input type="number" name="nik_ibu" class="form-control" id="nik_ibu" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="tempat_lahir_ibu">Tempat Lahir Ibu</label>
+                          <input type="text" name="tempat_lahir_ibu" class="form-control" id="tempat_lahir_ibu" required
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="tanggal_lahir_ibu">Tanggal Lahir Ibu</label>
+                          <input type="date" name="tanggal_lahir_ibu" class="form-control" id="tanggal_lahir_ibu"
+                            required oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="pekerjaan_ibu">Pekerjaan Ibu</label>
+                          <select name="pekerjaan_ibu" class="form-control" id="pekerjaan_ibu" required
+                            oninvalid="this.setCustomValidity('Silahkan pilih pekerjaan ibu !')"
+                            oninput="setCustomValidity('')">
+                            <option value="">-- Pilih Pekerjaan Ibu --</option>
+                            <option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
+                            <option value="Tidak Bekerja">Tidak Bekerja</option>
+                            <option value="PNS">PNS</option>
+                            <option value="TNI / Polri">TNI / Polri</option>
+                            <option value="Guru / Dosen">Guru / Dosen</option>
+                            <option value="Pegawai Swasta">Pegawai Swasta</option>
+                            <option value="Wiraswasta / Wirausaha">Wiraswasta / Wirausaha</option>
+                            <option value="Dokter / Perawat">Dokter / Perawat</option>
+                            <option value="Pedagang">Pedagang</option>
+                            <option value="Petani / Peternak">Petani / Peternak</option>
+                            <option value="Nelayan">Nelayan</option>
+                            <option value="Buruh (Tani / Bangunan)">Buruh (Tani / Bangunan)</option>
+                            <option value="Sopir">Sopir</option>
+                            <option value="Lainnya">Lainnya</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="status_ibu">Status Ibu</label>
+                          <select name="status_ibu" class="form-control" id="status_ibu" required
+                            oninvalid="this.setCustomValidity('Silahkan pilih status ibu !')"
+                            oninput="setCustomValidity('')">
+                            <option value="">-- Pilih Status Ibu --</option>
+                            <option value="Masih Hidup">Masih Hidup</option>
+                            <option value="Meninggal">Meninggal</option>
+                            <option value="Tidak Diketahui">Tidak Diketahui</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="pendidikan_terakhir_ibu">Pendidikan Terakhir Ibu</label>
+                          <select name="pendidikan_terakhir_ibu" class="form-control" id="pendidikan_terakhir_ibu"
+                            required oninvalid="this.setCustomValidity('Silahkan pilih pendidikan ibu !')"
+                            oninput="setCustomValidity('')">
+                            <option value="">-- Pilih Pendidikan Ibu --</option>
+                            <option value="Tidak Sekolah">Tidak Sekolah</option>
+                            <option value="SD Sederajat">SD Sederajat</option>
+                            <option value="SLTP Sederajat">SLTP Sederajat</option>
+                            <option value="SLTA Sederajat">SLTA Sederajat</option>
+                            <option value="S-1">S-1</option>
+                            <option value="S-2">S-2</option>
+                            <option value="S-3">S-3</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="penghasilan_ibu">Penghasilan Ibu Perbulan</label>
+                          <select name="penghasilan_ibu" class="form-control" id="penghasilan_ibu" required
+                            oninvalid="this.setCustomValidity('Silahkan penghasilan ibu !')"
+                            oninput="setCustomValidity('')">
+                            <option value="">-- Pilih Penghasilan Ibu --</option>
+                            <option value="< Rp. 1.000.000">
+                              < Rp. 1.000.000</option>
+                            <option value="Rp. 1.000.000 s/d Rp. 2.000.000">Rp. 1.000.000 s/d Rp. 2.000.000</option>
+                            <option value="> Rp. 2.000.000">> Rp. 2.000.000</option>
+                          </select>
+                        </div>
+                      </div>
+
+                    </div>
+                  </li>
+
+                  <li data-aos="fade-up" data-aos-delay="300">
+                    <i class="bx bx-user-circle icon-help"></i> <a data-toggle="collapse" href="#data-wali"
+                      class="collapsed">Identitas Wali <small><i>(opsional)</i></small> <i
+                        class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="data-wali" class="collapse" data-parent=".faq-list">
+                      <p>Biarkan kosong jika ayah dan ibu kandung masih hidup.</p>
+
+                      <div class="form-row mt-4">
+                        <div class="col-md-6 form-group">
+                          <label for="nama_wali">Nama Wali</label>
+                          <input type="text" name="nama_wali" class="form-control" id="nama_wali" />
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="nik_wali">NIK Wali</label>
+                          <input type="number" name="nik_wali" class="form-control" id="nik_wali" />
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="tempat_lahir_wali">Tempat Lahir Wali</label>
+                          <input type="text" name="tempat_lahir_wali" class="form-control" id="tempat_lahir_wali" />
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="tanggal_lahir_wali">Tanggal Lahir Wali</label>
+                          <input type="date" name="tanggal_lahir_wali" class="form-control" id="tanggal_lahir_wali" />
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="pekerjaan_wali">Pekerjaan Wali</label>
+                          <select name="pekerjaan_wali" class="form-control" id="pekerjaan_wali">
+                            <option value="">-- Pilih Pekerjaan Wali --</option>
+                            <option value="Tidak Bekerja">Tidak Bekerja</option>
+                            <option value="PNS">PNS</option>
+                            <option value="TNI / Polri">TNI / Polri</option>
+                            <option value="Guru / Dosen">Guru / Dosen</option>
+                            <option value="Pegawai Swasta">Pegawai Swasta</option>
+                            <option value="Wiraswasta / Wirausaha">Wiraswasta / Wirausaha</option>
+                            <option value="Dokter / Perawat">Dokter / Perawat</option>
+                            <option value="Pedagang">Pedagang</option>
+                            <option value="Petani / Peternak">Petani / Peternak</option>
+                            <option value="Nelayan">Nelayan</option>
+                            <option value="Buruh (Tani / Bangunan)">Buruh (Tani / Bangunan)</option>
+                            <option value="Sopir">Sopir</option>
+                            <option value="Lainnya">Lainnya</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="status_wali">Status Wali</label>
+                          <select name="status_wali" class="form-control" id="status_wali">
+                            <option value="">-- Pilih Status Wali --</option>
+                            <option value="Masih Hidup">Masih Hidup</option>
+                            <option value="Meninggal">Meninggal</option>
+                            <option value="Tidak Diketahui">Tidak Diketahui</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6 form-group">
+                          <label for="pendidikan_terakhir_wali">Pendidikan Terakhir Wali</label>
+                          <select name="pendidikan_terakhir_wali" class="form-control" id="pendidikan_terakhir_wali">
+                            <option value="">-- Pilih Pendidikan Wali --</option>
+                            <option value="Tidak Sekolah">Tidak Sekolah</option>
+                            <option value="SD Sederajat">SD Sederajat</option>
+                            <option value="SLTP Sederajat">SLTP Sederajat</option>
+                            <option value="SLTA Sederajat">SLTA Sederajat</option>
+                            <option value="S-1">S-1</option>
+                            <option value="S-2">S-2</option>
+                            <option value="S-3">S-3</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <label for="penghasilan_wali">Penghasilan Wali Perbulan</label>
+                          <select name="penghasilan_wali" class="form-control" id="penghasilan_wali">
+                            <option value="">-- Pilih Penghasilan Wali --</option>
+                            <option value="< Rp. 1.000.000">
+                              < Rp. 1.000.000</option>
+                            <option value="Rp. 1.000.000 s/d Rp. 2.000.000">Rp. 1.000.000 s/d Rp. 2.000.000</option>
+                            <option value="> Rp. 2.000.000">> Rp. 2.000.000</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li data-aos="fade-up" data-aos-delay="400">
+                    <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#biodata-sekolah"
+                      class="collapsed">Biodata Sekolah Asal <i class="bx bx-chevron-down icon-show"></i><i
+                        class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="biodata-sekolah" class="collapse" data-parent=".faq-list">
+
+                      <div class="form-group mt-4">
+                        <label for="nama_sekolah">Nama Sekolah / Madrasah</label>
+                        <input type="text" class="form-control" name="nama_sekolah" id="nama_sekolah" required
+                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" /> </div>
+
+                      <div class="form-group">
+                        <label for="alamat_sekolah">Alamat Sekolah</label>
+                        <textarea class="form-control" name="alamat_sekolah" rows="2" required
+                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"></textarea>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="npsn_sekolah">NPSN Sekolah</label>
+                        <input type="number" class="form-control" name="npsn_sekolah" id="npsn_sekolah" required
+                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+
+              <!-- Button Submit -->
+              <div class="text-center mt-4">
+                <button class="btn btn-success btn-lg btn-block" type="submit">Kirim Data</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ======= Contact Section ======= -->
@@ -76,33 +516,43 @@
             <div class="info">
 
               <div class="address">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p>manbaulhudaklutuk@gmail.com</p>
+                <a href="mailto:manbaulhudaklutuk@gmail.com?subject=subject" target="_black">
+                  <i class="icofont-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>manbaulhudaklutuk@gmail.com</p>
+                </a>
               </div>
 
               <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Handphone:</h4>
-                <p>0896-7884-1703</p>
+                <a href="https://wa.me/089678841703" target="_black">
+                  <i class="icofont-phone"></i>
+                  <h4>Handphone:</h4>
+                  <p>0896-7884-1703</p>
+                </a>
               </div>
 
               <div class="phone">
-                <i class="icofont-facebook"></i>
-                <h4>Facebook:</h4>
-                <p>MTs Manba'ul Huda</p>
+                <a href="https://web.facebook.com/mts.manbaulhuda.35" target="_black">
+                  <i class="icofont-facebook"></i>
+                  <h4>Facebook:</h4>
+                  <p>MTs Manba'ul Huda</p>
+                </a>
               </div>
 
               <div class="phone">
-                <i class="icofont-instagram"></i>
-                <h4>Instagram:</h4>
-                <p>mts_manhud</p>
+                <a href="https://www.instagram.com/mts_manhud/" target="_black">
+                  <i class="icofont-instagram"></i>
+                  <h4>Instagram:</h4>
+                  <p>mts_manhud</p>
+                </a>
               </div>
 
               <div class="phone">
-                <i class="icofont-youtube"></i>
-                <h4>YouTube:</h4>
-                <p>Si Mada Channel</p>
+                <a href="https://www.youtube.com/channel/UCwMqokL9kFbPDJk3Hp_M2pA/videos" target="_black">
+                  <i class="icofont-youtube"></i>
+                  <h4>YouTube:</h4>
+                  <p>Si Mada Channel</p>
+                </a>
               </div>
 
             </div>
@@ -136,7 +586,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>MTs. ManHud</span></strong>. 2021
+        &copy; Copyright <strong><span>MTs. ManHud</span></strong>. 2022
       </div>
       <div class="credits">
         Developed by <a href="https://www.instagram.com/qkoh_st/" target="_black">Qkoh St</a>
@@ -145,7 +595,6 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
