@@ -69,14 +69,17 @@
         <div class="section-title mt-5" data-aos="fade-up">
           <h2>Formulir</h2>
           <p>Formulir Pendaftaran</p>
-          <span>Silahkan isikan data diri anda melalui formulir dibawah kemudian klik tombol <b>Kirim Data</b>!</span>
+          <span>
+            Silahkan isikan semua data yang diminta melalui formulir dibawah kemudian klik tombol
+            <b>Kirim Data</b>!
+          </span>
         </div>
 
 
         <div class="row">
           <div class="col-lg-12" data-aos="fade-left" data-aos-delay="200">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form name="submit-to-google-sheet" role="form" class="php-email-form">
               <!-- Identitas Pribadi -->
               <div class="faq-list">
                 <ul>
@@ -91,13 +94,14 @@
                           <label for="nama_lengkap">Nama Lengkap <small><i>Sesuai Ijazah / Akta
                                 Kelahiran</i></small></label>
                           <input type="text" name="nama_lengkap" class="form-control" id="nama_lengkap" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                         <div class="col-md-6 form-group">
                           <label for="jenis_kelamin">Jenis Kelamin</label>
                           <select name="jenis_kelamin" class="form-control" id="jenis_kelamin" required
                             oninvalid="this.setCustomValidity('Silahkan pilih jenis kelamin !')"
-                            oninput="setCustomValidity('')">
+                            oninput="this.setCustomValidity('')">
                             <option value="">-- Pilih Jenis Kelamin --</option>
                             <option value="Laki-Laki">Laki-laki</option>
                             <option value="Perempuan">Perempuan</option>
@@ -109,12 +113,14 @@
                         <div class="col-md-6 form-group">
                           <label for="nisn">NISN (Nomor Induk Siswa Nasional)</label>
                           <input type="number" name="nisn" class="form-control" id="nisn" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                         <div class="col-md-6 form-group">
                           <label for="nik">NIK (Nomor Induk Kependudukan) <small><i>Sesuai KK</i></small></label>
                           <input type="number" name="nik" class="form-control" id="nik" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                       </div>
 
@@ -123,13 +129,15 @@
                           <label for="tempat_lahir">Tempat Lahir <small><i>Sesuai Ijazah / Akta
                                 Kelahiran</i></small></label>
                           <input type="text" name="tempat_lahir" class="form-control" id="tempat_lahir" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                         <div class="col-md-6 form-group">
                           <label for="tanggal_lahir">Tanggal Lahir <small><i>Sesuai Ijazah / Akta
                                 Kelahiran</i></small></label>
                           <input type="date" name="tanggal_lahir" class="form-control" id="tanggal_lahir" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                       </div>
 
@@ -137,12 +145,14 @@
                         <div class="col-md-6 form-group">
                           <label for="desa_kelurahan">Desa/Kelurahan</label>
                           <input type="text" name="desa_kelurahan" class="form-control" id="desa_kelurahan" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                         <div class="col-md-6 form-group">
                           <label for="kecamatan">Kecamatan</label>
                           <input type="text" name="kecamatan" class="form-control" id="kecamatan" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                       </div>
 
@@ -150,19 +160,22 @@
                         <div class="col-md-6 form-group">
                           <label for="kabupaten_kota">Kabupaten/Kota</label>
                           <input type="text" name="kabupaten_kota" class="form-control" id="kabupaten_kota" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                         <div class="col-md-6 form-group">
                           <label for="provinsi">Provinsi</label>
                           <input type="text" name="provinsi" class="form-control" id="provinsi" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                       </div>
 
                       <div class="form-group">
                         <label for="nomor_wa">Nomor WA</label>
                         <input type="number" class="form-control" name="nomor_wa" id="nomor_wa" required
-                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                          oninput="this.setCustomValidity('')" />
                       </div>
 
                       <div class="form-group">
@@ -184,12 +197,14 @@
                         <div class="col-md-6 form-group">
                           <label for="nama_ayah">Nama Ayah <small><i>Sesuai Ijazah / Akta Kelahiran</i></small></label>
                           <input type="text" name="nama_ayah" class="form-control" id="nama_ayah" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                         <div class="col-md-6 form-group">
                           <label for="nik_ayah">NIK Ayah <small><i>Sesuai KK</i></small></label>
                           <input type="number" name="nik_ayah" class="form-control" id="nik_ayah" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                       </div>
 
@@ -197,12 +212,14 @@
                         <div class="col-md-6 form-group">
                           <label for="tempat_lahir_ayah">Tempat Lahir Ayah</label>
                           <input type="text" name="tempat_lahir_ayah" class="form-control" id="tempat_lahir_ayah"
-                            required oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            required oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                         <div class="col-md-6 form-group">
                           <label for="tanggal_lahir_ayah">Tanggal Lahir Ayah</label>
                           <input type="date" name="tanggal_lahir_ayah" class="form-control" id="tanggal_lahir_ayah"
-                            required oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            required oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                       </div>
 
@@ -211,7 +228,7 @@
                           <label for="pekerjaan_ayah">Pekerjaan Ayah</label>
                           <select name="pekerjaan_ayah" class="form-control" id="pekerjaan_ayah" required
                             oninvalid="this.setCustomValidity('Silahkan pilih pekerjaan ayah !')"
-                            oninput="setCustomValidity('')">
+                            oninput="this.setCustomValidity('')">
                             <option value="">-- Pilih Pekerjaan Ayah --</option>
                             <option value="Tidak Bekerja">Tidak Bekerja</option>
                             <option value="PNS">PNS</option>
@@ -232,7 +249,7 @@
                           <label for="status_ayah">Status Ayah</label>
                           <select name="status_ayah" class="form-control" id="status_ayah" required
                             oninvalid="this.setCustomValidity('Silahkan pilih status ayah !')"
-                            oninput="setCustomValidity('')">
+                            oninput="this.setCustomValidity('')">
                             <option value="">-- Pilih Status Ayah --</option>
                             <option value="Masih Hidup">Masih Hidup</option>
                             <option value="Meninggal">Meninggal</option>
@@ -246,7 +263,7 @@
                           <label for="pendidikan_terakhir_ayah">Pendidikan Terakhir Ayah</label>
                           <select name="pendidikan_terakhir_ayah" class="form-control" id="pendidikan_terakhir_ayah"
                             required oninvalid="this.setCustomValidity('Silahkan pilih pendidikan ayah !')"
-                            oninput="setCustomValidity('')">
+                            oninput="this.setCustomValidity('')">
                             <option value="">-- Pilih Pendidikan Ayah --</option>
                             <option value="Tidak Sekolah">Tidak Sekolah</option>
                             <option value="SD Sederajat">SD Sederajat</option>
@@ -261,7 +278,7 @@
                           <label for="penghasilan_ayah">Penghasilan Ayah Perbulan</label>
                           <select name="penghasilan_ayah" class="form-control" id="penghasilan_ayah" required
                             oninvalid="this.setCustomValidity('Silahkan penghasilan ayah !')"
-                            oninput="setCustomValidity('')">
+                            oninput="this.setCustomValidity('')">
                             <option value="">-- Pilih Penghasilan Ayah --</option>
                             <option value="< Rp. 1.000.000">
                               < Rp. 1.000.000</option>
@@ -283,12 +300,14 @@
                         <div class="col-md-6 form-group">
                           <label for="nama_ibu">Nama Ibu <small><i>Sesuai Ijazah / Akta Kelahiran</i></small></label>
                           <input type="text" name="nama_ibu" class="form-control" id="nama_ibu" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                         <div class="col-md-6 form-group">
                           <label for="nik_ibu">NIK Ibu <small><i>Sesuai KK</i></small></label>
                           <input type="number" name="nik_ibu" class="form-control" id="nik_ibu" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                       </div>
 
@@ -296,12 +315,14 @@
                         <div class="col-md-6 form-group">
                           <label for="tempat_lahir_ibu">Tempat Lahir Ibu</label>
                           <input type="text" name="tempat_lahir_ibu" class="form-control" id="tempat_lahir_ibu" required
-                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                         <div class="col-md-6 form-group">
                           <label for="tanggal_lahir_ibu">Tanggal Lahir Ibu</label>
                           <input type="date" name="tanggal_lahir_ibu" class="form-control" id="tanggal_lahir_ibu"
-                            required oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                            required oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                            oninput="this.setCustomValidity('')" />
                         </div>
                       </div>
 
@@ -310,7 +331,7 @@
                           <label for="pekerjaan_ibu">Pekerjaan Ibu</label>
                           <select name="pekerjaan_ibu" class="form-control" id="pekerjaan_ibu" required
                             oninvalid="this.setCustomValidity('Silahkan pilih pekerjaan ibu !')"
-                            oninput="setCustomValidity('')">
+                            oninput="this.setCustomValidity('')">
                             <option value="">-- Pilih Pekerjaan Ibu --</option>
                             <option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
                             <option value="Tidak Bekerja">Tidak Bekerja</option>
@@ -332,7 +353,7 @@
                           <label for="status_ibu">Status Ibu</label>
                           <select name="status_ibu" class="form-control" id="status_ibu" required
                             oninvalid="this.setCustomValidity('Silahkan pilih status ibu !')"
-                            oninput="setCustomValidity('')">
+                            oninput="this.setCustomValidity('')">
                             <option value="">-- Pilih Status Ibu --</option>
                             <option value="Masih Hidup">Masih Hidup</option>
                             <option value="Meninggal">Meninggal</option>
@@ -346,7 +367,7 @@
                           <label for="pendidikan_terakhir_ibu">Pendidikan Terakhir Ibu</label>
                           <select name="pendidikan_terakhir_ibu" class="form-control" id="pendidikan_terakhir_ibu"
                             required oninvalid="this.setCustomValidity('Silahkan pilih pendidikan ibu !')"
-                            oninput="setCustomValidity('')">
+                            oninput="this.setCustomValidity('')">
                             <option value="">-- Pilih Pendidikan Ibu --</option>
                             <option value="Tidak Sekolah">Tidak Sekolah</option>
                             <option value="SD Sederajat">SD Sederajat</option>
@@ -360,8 +381,8 @@
                         <div class="col-md-6 form-group">
                           <label for="penghasilan_ibu">Penghasilan Ibu Perbulan</label>
                           <select name="penghasilan_ibu" class="form-control" id="penghasilan_ibu" required
-                            oninvalid="this.setCustomValidity('Silahkan penghasilan ibu !')"
-                            oninput="setCustomValidity('')">
+                            oninvalid="this.setCustomValidity('Silahkan pilih penghasilan ibu !')"
+                            oninput="this.setCustomValidity('')">
                             <option value="">-- Pilih Penghasilan Ibu --</option>
                             <option value="< Rp. 1.000.000">
                               < Rp. 1.000.000</option>
@@ -471,18 +492,21 @@
                       <div class="form-group mt-4">
                         <label for="nama_sekolah">Nama Sekolah / Madrasah</label>
                         <input type="text" class="form-control" name="nama_sekolah" id="nama_sekolah" required
-                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" /> </div>
+                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                          oninput="this.setCustomValidity('')" /> </div>
 
                       <div class="form-group">
                         <label for="alamat_sekolah">Alamat Sekolah</label>
                         <textarea class="form-control" name="alamat_sekolah" rows="2" required
-                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"></textarea>
+                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                          oninput="this.setCustomValidity('')"></textarea>
                       </div>
 
                       <div class="form-group">
                         <label for="npsn_sekolah">NPSN Sekolah</label>
                         <input type="number" class="form-control" name="npsn_sekolah" id="npsn_sekolah" required
-                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" />
+                          oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')"
+                          oninput="this.setCustomValidity('')" />
                       </div>
                     </div>
                   </li>
@@ -490,9 +514,32 @@
                 </ul>
               </div>
 
+              <div class="alert alert-success alert-dismissible d-none fade show success-alert mt-2" role="alert">
+                <h4 class="alert-heading">Success !</h4>
+                <p>Terimakasih data anda berhasil dikirim, silahkan lakukan konfirmasi pendaftaran melalui tombol
+                  konfirmasi
+                  dibawah dengan menuliskan nama lengkap anda.</p>
+                <hr>
+                <a href="https://api.whatsapp.com/send?phone=6289678841703&text=Saya%20___________%20data%20diri%20saya%20telah%20saya%20kirim%20melalui%20formulir%20pendaftaran%20online%20MTs%20Manba'ul%20Huda."
+                  class="btn btn-success"><i class="icofont-whatsapp"></i> Konfirmasi Pendaftaran</a>
+              </div>
+
+              <div class="alert alert-danger alert-dismissible d-none fade show danger-alert mt-2" role="alert">
+                <strong><i class="icofont-ui-close"></i> Error !</strong> Data anda gagal dikirim.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
               <!-- Button Submit -->
               <div class="text-center mt-4">
-                <button class="btn btn-success btn-lg btn-block" type="submit">Kirim Data</button>
+                <button class="btn btn-success btn-lg btn-block btn-kirim" type="submit" name="submit">Kirim
+                  Data</button>
+
+                <button class="btn btn-primary btn-lg btn-block btn-loading d-none" type="button" disabled>
+                  <span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span>
+                  Harap tunggu...
+                </button>
               </div>
             </form>
 
@@ -609,6 +656,46 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby_aLtmhqjy2eD79rVQ9_s5Wh75gADzsYkK9CZvh9ROryUt6t3hIhJmFotjtx2obumT/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const btnKirim = document.querySelector('.btn-kirim');
+    const btnLoading = document.querySelector('.btn-loading');
+    const successAlert = document.querySelector('.success-alert');
+    const errorAlert = document.querySelector('.danger-alert');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      // ketika tombol submit diklik
+      // tampilkan tombol loading, hilangkan tombol kirim
+      btnLoading.classList.toggle('d-none');
+      btnKirim.classList.toggle('d-none');
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form),
+        mode: 'no-cors',
+      })
+        .then((response) => {
+          // tampilkan tombol kirim, hilangkan tombol loading
+          btnLoading.classList.toggle('d-none');
+          // tampilkan alert
+          successAlert.classList.toggle('d-none');
+          // reset formnya
+          form.reset();
+          console.log('Success!', response);
+        })
+        .catch((error) => {
+          // tampilkan tombol kirim, hilangkan tombol loading
+          btnLoading.classList.toggle('d-none');
+          btnKirim.classList.toggle('d-none');
+          // tampilkan alert
+          errorAlert.classList.toggle('d-none');
+          console.error('Error!', error.message);
+        });
+    })
+  </script>
 
 </body>
 
