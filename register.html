@@ -174,8 +174,6 @@
 
                       </div>
 
-
-
                       <div class="form-group">
                         <label for="nomor_wa">Nomor WA</label>
                         <input type="number" class="form-control required" name="nomor_wa" id="nomor_wa" />
@@ -675,7 +673,7 @@
       $.ajax({
         type: "GET",
         dataType: "json",
-        url: "http://dev.farizdotid.com/api/daerahindonesia/provinsi",
+        url: "https://dev.farizdotid.com/api/daerahindonesia/provinsi",
         success: function (result) {
           let data = result.provinsi;
           let option = '<option value="">-- Pilih Data --</option>';
@@ -699,7 +697,7 @@
       $.ajax({
         type: "GET",
         dataType: "json",
-        url: "http://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=" + provinsi_id,
+        url: "https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=" + provinsi_id,
         success: function (result) {
           let data = result.kota_kabupaten;
           let option = '<option value="">-- Pilih Data --</option>';
