@@ -189,7 +189,7 @@
                     </div>
                   </li>
 
-                  <li data-aos="fade-up" data-aos-delay="100">
+                  <li data-aos="fade-up" data-aos-delay="50">
                     <i class="bx bx-user-circle icon-help"></i> <a data-toggle="collapse" href="#data-ayah"
                       class="collapse">Identitas Ayah Kandung <i class="bx bx-chevron-down icon-show"></i><i
                         class="bx bx-chevron-up icon-close"></i></a>
@@ -288,7 +288,7 @@
                     </div>
                   </li>
 
-                  <li data-aos="fade-up" data-aos-delay="200">
+                  <li data-aos="fade-up" data-aos-delay="100">
                     <i class="bx bx-user-circle icon-help"></i> <a data-toggle="collapse" href="#data-ibu"
                       class="collapse">Identitas Ibu Kandung <i class="bx bx-chevron-down icon-show"></i><i
                         class="bx bx-chevron-up icon-close"></i></a>
@@ -389,7 +389,7 @@
                     </div>
                   </li>
 
-                  <li data-aos="fade-up" data-aos-delay="300">
+                  <li data-aos="fade-up" data-aos-delay="150">
                     <i class="bx bx-user-circle icon-help"></i> <a data-toggle="collapse" href="#data-wali"
                       class="collapse">Identitas Wali <small><i>(opsional)</i></small> <i
                         class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
@@ -478,7 +478,7 @@
                     </div>
                   </li>
 
-                  <li data-aos="fade-up" data-aos-delay="400">
+                  <li data-aos="fade-up" data-aos-delay="200">
                     <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#biodata-sekolah"
                       class="collapse">Biodata Sekolah Asal <i class="bx bx-chevron-down icon-show"></i><i
                         class="bx bx-chevron-up icon-close"></i></a>
@@ -678,7 +678,7 @@
           let data = result.provinsi;
           let option = '<option value="">-- Pilih Data --</option>';
           data.forEach(item => {
-            option += '<option value=' + item.nama + ' data-val=' + item.id + '>' + item.nama + '</option>';
+            option += '<option value="' + item.nama + '" data-val=' + item.id + '>' + item.nama + '</option>';
           });
           $('#provinsi').html(option);
         }
@@ -702,7 +702,7 @@
           let data = result.kota_kabupaten;
           let option = '<option value="">-- Pilih Data --</option>';
           data.forEach(item => {
-            option += '<option value=' + item.nama + ' data-val=' + item.id + '>' + item.nama + '</option>';
+            option += '<option value="' + item.nama + '" data-val=' + item.id + '>' + item.nama + '</option>';
           });
           $('#kabupaten_kota').html(option);
         }
@@ -724,7 +724,7 @@
           let data = result.kecamatan;
           let option = '<option value="">-- Pilih Data --</option>';
           data.forEach(item => {
-            option += '<option value=' + item.nama + ' data-val=' + item.id + '>' + item.nama + '</option>';
+            option += '<option value="' + item.nama + '" data-val=' + item.id + '>' + item.nama + '</option>';
           });
           $('#kecamatan').html(option);
         }
@@ -745,7 +745,7 @@
           let data = result.kelurahan;
           let option = '<option value="">-- Pilih Data --</option>';
           data.forEach(item => {
-            option += '<option value=' + item.nama + ' data-val=' + item.id + '>' + item.nama + '</option>';
+            option += '<option value="' + item.nama + '" data-val=' + item.id + '>' + item.nama + '</option>';
           });
           $('#desa_kelurahan').html(option);
         }
@@ -761,7 +761,6 @@
     }
 
     $("#btn-kirim").click(function () {
-      resetForm();
       let isValid = checkValidateForm();
       if (isValid == true) {
         Swal.fire({
@@ -810,7 +809,7 @@
     }
 
     function submitForm() {
-      const scriptURL = 'https://script.google.com/macros/s/AKfycby_aLtmhqjy2eD79rVQ9_s5Wh75gADzsYkK9CZvh9ROryUt6t3hIhJmFotjtx2obumT/exec'
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyhPYou97EZuY4WQbURD8bUpqYEGE3_h_yp6vLpZhklSVYsSbVL5bCRfj0MKMhfxs62/exec'
       const form = document.forms['submit-to-google-sheet']
       const btnKirim = document.querySelector('.btn-kirim');
       const btnLoading = document.querySelector('.btn-loading');
@@ -831,6 +830,11 @@
           // tampilkan tombol kirim, hilangkan tombol loading
           btnLoading.classList.toggle('d-none');
           // tampilkan alert
+          Swal.fire(
+            'Berhasil',
+            'Data berhasil dikirim',
+            'success'
+          )
           successAlert.classList.toggle('d-none');
           // reset formnya
           resetForm();
@@ -841,12 +845,17 @@
           btnLoading.classList.toggle('d-none');
           btnKirim.classList.toggle('d-none');
           // tampilkan alert
+          Swal.fire(
+            'Gagal',
+            'Data gagal dikirim',
+            'error'
+          )
           errorAlert.classList.toggle('d-none');
           console.error('Error!', error.message);
         });
     }
 
-    function resetForm(){
+    function resetForm() {
       const form = document.forms['submit-to-google-sheet']
       form.reset();
       $('.form-control').val('');
